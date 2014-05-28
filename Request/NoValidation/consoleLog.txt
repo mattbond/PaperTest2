@@ -1,0 +1,86 @@
+Mai 28, 2014 8:21:10 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.7.0_45\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.7.0_45\jre\bin;C:\Program Files\ImageMagick-6.8.8-Q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\ActivIdentity\ActivClient\;C:\Program Files (x86)\ActivIdentity\ActivClient\;.
+Mai 28, 2014 8:21:10 PM org.apache.tomcat.util.digester.SetPropertiesRule begin
+WARNING: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:PaperTest2' did not find a matching property.
+Mai 28, 2014 8:21:10 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Mai 28, 2014 8:21:10 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Mai 28, 2014 8:21:10 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 740 ms
+Mai 28, 2014 8:21:10 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Mai 28, 2014 8:21:10 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.42
+Mai 28, 2014 8:21:11 PM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(C:\Users\bond\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\PaperTest2\WEB-INF\lib\geronimo-servlet_3.0_spec-1.0.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Mai 28, 2014 8:21:16 PM org.apache.catalina.core.ApplicationContext log
+INFO: No Spring WebApplicationInitializer types detected on classpath
+Mai 28, 2014 8:21:16 PM org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring root WebApplicationContext
+Mai 28, 2014 8:21:16 PM org.springframework.web.context.ContextLoader initWebApplicationContext
+INFO: Root WebApplicationContext: initialization started
+Mai 28, 2014 8:21:16 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing Root WebApplicationContext: startup date [Wed May 28 20:21:16 JST 2014]; root of context hierarchy
+Mai 28, 2014 8:21:16 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from ServletContext resource [/WEB-INF/cxf-beans.xml]
+Mai 28, 2014 8:21:16 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+Mai 28, 2014 8:21:16 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+Mai 28, 2014 8:21:16 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3129f63e: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,pageserviceporttype]; root of factory hierarchy
+Mai 28, 2014 8:21:17 PM org.apache.cxf.wsdl.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFO: Creating Service {http://paper.bitapp.de/page}pageService from WSDL: wsdl/paper2.wsdl
+Mai 28, 2014 8:21:18 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFO: Setting the server's publish address to be /pageServicePort
+Mai 28, 2014 8:21:18 PM org.apache.cxf.wsdl.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFO: Creating Service {http://docs.oasis-open.org/ws-dd/ns/discovery/2009/01}Discovery from WSDL: classpath:/org/apache/cxf/ws/discovery/wsdl/wsdd-discovery-1.1-wsdl-os.wsdl
+Mai 28, 2014 8:21:18 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFO: Setting the server's publish address to be soap.udp://239.255.255.250:3702
+Mai 28, 2014 8:21:18 PM org.apache.cxf.wsdl.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFO: Creating Service {http://docs.oasis-open.org/ws-dd/ns/discovery/2009/01}DiscoveryProxy from class org.apache.cxf.jaxws.support.DummyImpl
+Mai 28, 2014 8:21:19 PM org.springframework.web.context.ContextLoader initWebApplicationContext
+INFO: Root WebApplicationContext: initialization completed in 2707 ms
+Mai 28, 2014 8:21:19 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Mai 28, 2014 8:21:19 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Mai 28, 2014 8:21:19 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 8162 ms
+Mai 28, 2014 8:22:08 PM org.apache.cxf.services.pageService.pageServicePort.pageServicePortType
+INFO: Inbound Message
+----------------------------
+ID: 1
+Address: http://localhost:8080/PaperTest2/services/pageServicePort
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml;charset=UTF-8
+Headers: {accept-encoding=[gzip,deflate], connection=[Keep-Alive], Content-Length=[403], content-type=[text/xml;charset=UTF-8], host=[localhost:8080], SOAPAction=["Ping"], user-agent=[Apache-HttpClient/4.1.1 (java 1.5)]}
+Payload: <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:page="http://paper.bitapp.de/page">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <page:Ping>
+         <Status>
+            <page:Code>456</page:Code>
+            <page:Message>ABC</page:Message>
+         </Status>
+         <MySimple>ABCDEFGH</MySimple>
+      </page:Ping>
+   </soapenv:Body>
+</soapenv:Envelope>
+--------------------------------------
+Mai 28, 2014 8:22:08 PM de.bitapp.paper.page.PageServicePortTypeImpl ping
+INFO: Executing operation ping
+de.bitapp.paper.page.StatusCodeTyp@596b2557
+ABCDEFGH
+Mai 28, 2014 8:22:08 PM org.apache.cxf.services.pageService.pageServicePort.pageServicePortType
+INFO: Outbound Message
+---------------------------
+ID: 1
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml
+Headers: {}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns1:PingResponse xmlns:ns1="http://paper.bitapp.de/page"><Status xmlns:ns2="http://paper.bitapp.de/page"><ns2:Code>456</ns2:Code><ns2:Message>ABC</ns2:Message></Status></ns1:PingResponse></soap:Body></soap:Envelope>
+--------------------------------------

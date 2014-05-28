@@ -1,0 +1,8 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <soap:Fault>
+         <faultcode>soap:Client</faultcode>
+         <faultstring>Unmarshalling Error: unrecognized type name: {http://paper.bitapp.de/page}MySimpleType. Did you mean {http://paper.bitapp.de/page}StatusCodeTyp?</faultstring>
+      </soap:Fault>
+   </soap:Body>
+</soap:Envelope>

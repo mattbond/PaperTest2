@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://paper.bitapp.de/page" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="pageService" targetNamespace="http://paper.bitapp.de/page">
+  <types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://paper.bitapp.de/page">
+			<complexType name="StatusCodeTyp">
+				<sequence>
+					<element name="Code" type="int"/>
+					<element name="Message" type="normalizedString"/>
+				</sequence>
+			</complexType>
+			<simpleType name="MySimpleType">
+				<restriction base="normalizedString">
+					<minLength value="0"/>
+					<maxLength value="240"/>
+				</restriction>
+			</simpleType>
+		</schema>
+  </types>
+  <message name="PingRequest">
+    <part name="Status" type="tns:StatusCodeTyp">
+    </part>
+	<part name="MySimple" type="tns:MySimpleType"/>
+  </message>
+  <message name="PingResponse">
+    <part name="Status" type="tns:StatusCodeTyp">
+    </part>
+  </message>
+  <portType name="pageServicePortType">
+    <operation name="Ping">
+      <input message="tns:PingRequest">
+    </input>
+      <output message="tns:PingResponse">
+    </output>
+    </operation>
+  </portType>
+  <binding name="pageServiceBinding" type="tns:pageServicePortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="Ping">
+      <soap:operation soapAction="Ping" style="rpc"/>
+      <input>
+        <soap:body namespace="http://paper.bitapp.de/page" use="literal"/>
+      </input>
+      <output>
+        <soap:body namespace="http://paper.bitapp.de/page" use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="pageService">
+    <port binding="tns:pageServiceBinding" name="pageServicePort">
+      <soap:address location="http://localhost:8080/PaperTest1/services/pageServicePort"/>
+    </port>
+  </service>
+</definitions>

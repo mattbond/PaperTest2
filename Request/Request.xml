@@ -1,0 +1,12 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:page="http://paper.bitapp.de/page">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <page:Ping>
+         <Status>
+            <page:Code>456</page:Code>
+            <page:Message>ABC</page:Message>
+         </Status>
+         <MySimple>ABCDEFGH</MySimple>
+      </page:Ping>
+   </soapenv:Body>
+</soapenv:Envelope>
